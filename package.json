@@ -1,0 +1,26 @@
+{
+  "name": "ejada-frameworktest",
+  "version": "1.0.0",
+  "description": "Automation Framework Task – Executive Brief  \r We’re looking for a sharp, solutions-driven engineer to design a scalable and  \r maintainable test automation project using modern best practices.  \r Your Task:  \r Build a test automation framework in TS using:  \r • Playwright WebDriver  \r Key Requirements:  \r • Cross-browser support: Chrome & Firefox. \r • Parallel test execution  \r • Page Object Model (POM) for structure and maintainability  \r • Generate test execution reports (e.g., Allure or Extent Reports) \r Task Overview:  \r UI Task Web Automation with Playwright  \r • Open the website: https://www.saucedemo.com/  \r • Implement all login scenarios on the web application (valid, invalid, locked out,  \r etc.).  \r • Implement a full product order scenario (add to cart, checkout, finish) for the logged-in \r user. Add one product to the cart  \r • Support cross-browser testing (Chrome and Firefox).  \r • Implement parallel execution.  \r • Deliver clean, maintainable, and well-structured code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "test:allure": "npx playwright test --reporter=list --reporter=allure-playwright",
+    "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
+    "allure:open": "allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "typescript": "^5.5.0",
+    "ts-node": "^10.9.1",
+    "allure-playwright": "^2.0.0",
+    "allure-commandline": "^2.13.10"
+  }
+}
